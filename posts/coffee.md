@@ -14,7 +14,7 @@ Actual coffee is drinkable without any addition of milk. It isn't as bitter as i
 
 Unlike other coffee, instant coffee completely disolves into the water. It also brews instantly.
 
-<img src="../images/coffee/nescafe.png" width="50%"/>
+<img src="https://github.com/il3ven/blog/blob/main/images/coffee/nescafe.png?raw=true" width="15%"/>
 
 ### Upgrade your coffee - Coffee Beans
 
