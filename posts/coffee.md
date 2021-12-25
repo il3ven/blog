@@ -16,6 +16,8 @@ Unlike other coffee, instant coffee completely disolves into the water. It also 
 
 <img src="https://github.com/il3ven/blog/blob/main/images/coffee/nescafe.png?raw=true" width="100px"/>
 
+> A popular instant coffee from Nescafe
+
 ## The Basics for a Good Cup of Coffee
 Brewing a good cup of coffee is a science but the taste is worth the effort.
 

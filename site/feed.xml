@@ -2,19 +2,19 @@
 <rss version="2.0">
 <channel>
   <title>il3ven's website</title>
-  <link>https://il3ven.github.io/blogmaker-github-actions/</link>
+  <link>https://il3ven.github.io/blog/</link>
   <description>il3ven's website</description>
   <image>
       <url>images/favicon.png</url>
       <title>il3ven's website</title>
-      <link>https://il3ven.github.io/blogmaker-github-actions/</link>
+      <link>https://il3ven.github.io/blog/</link>
   </image>
 
 <item>
-<title>Hello world</title>
-<link>https://il3ven.github.io/blogmaker-github-actions/general/2020/10/24/hello.html</link>
-<guid>https://il3ven.github.io/blogmaker-github-actions/general/2020/10/24/hello.html</guid>
-<pubDate>Sat, 24 Oct 2020 00:00:00 +0000</pubDate>
+<title>Get over instant coffee - From an Indian's perspective</title>
+<link>https://il3ven.github.io/blog/general/2021/12/24/coffee.html</link>
+<guid>https://il3ven.github.io/blog/general/2021/12/24/coffee.html</guid>
+<pubDate>Fri, 24 Dec 2021 00:00:00 +0000</pubDate>
 <description></description>
 </item>
 
