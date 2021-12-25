@@ -31,9 +31,7 @@ Here is a great video that'll answer all your doubts.
 
 The complexity of the methods increases down this list but it's worth the extra effort.
 
-1. **Coffee Dip Bags**
-   
-   **This** is the simplest method, they are like tea bags and need to be dipped into hot water.
+1. **Coffee Dip Bags** - This is the simplest method, they are like tea bags and need to be dipped into hot water.
 2. [**Channi Grind**](https://www.youtube.com/watch?v=m2O5MqXD4n0)
 3. **French Press**
 4. **Aero Press**
