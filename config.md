@@ -4,4 +4,4 @@
 [website_root]: <> (/var/www/html)
 [posts_directory]: <> (general)
 [homepage_category]: <> (general)
-[domain]: <> (https://il3ven.github.io/blogmaker-github-actions)
+[domain]: <> (https://il3ven.github.io/blog)
