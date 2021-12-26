@@ -4,7 +4,7 @@ import os, sys, datetime
 PRE_HEADER = """
 
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
@@ -76,8 +76,10 @@ TOC_TITLE_TEMPLATE = """
 
 <title> {0} </title>
 <br>
-<center><h1 style="border-bottom:0px"> {0} </h1></center>
-
+<center>
+    <h1 style="border-bottom:0px"> {0} </h1>
+    <small>👋 Hi, this is my personal blog. Contact me at <code>to.vc95 (at) gmail (dot) com</code></small>
+</center>
 """
 
 FOOTER = """ </div> """
@@ -104,8 +106,12 @@ TOC_ITEM_TEMPLATE = """
 
 TWITTER_CARD_TEMPLATE = """
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="{}" />
-<meta name="twitter:image" content="{}" />
+<meta name="twitter:title" content="{title}" />
+<meta name="twitter:image" content="{icon}" />
+<meta property="og:title" content="{title}" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="{url}" />
+<meta property="og:image" content="{icon}" />
 """
 
 
@@ -194,8 +200,12 @@ def generate_feed(global_config, metadatas):
 
 
 
-def make_twitter_card(title, global_config):
-    return TWITTER_CARD_TEMPLATE.format(title, global_config['icon'])
+def make_twitter_card(title, global_config, path):
+    return TWITTER_CARD_TEMPLATE.format(
+        title = title, 
+        icon = global_config['icon'],
+        url = global_config['domain'] + "/" + path
+    )
 
 
 def defancify(text):
@@ -229,14 +239,16 @@ def make_toc(toc_items, global_config, all_categories, category=None):
     if category:
         title = category.capitalize()
         root_path = '..'
+        path = 'categories/' + category + '.html'
     else:
         title = global_config['title']
         root_path = '.'
+        path = ''
     return (
         PRE_HEADER +
         RSS_LINK.format(root_path, title) +
+        make_twitter_card(title, global_config, path) +
         HEADER_TEMPLATE.replace('$root', root_path).replace('$icon', global_config['icon']) +
-        make_twitter_card(title, global_config) +
         TOC_TITLE_TEMPLATE.format(title) +
         make_categories_header(all_categories, root_path) +
         TOC_START +
@@ -272,8 +284,8 @@ if __name__ == '__main__':
         total_file_contents = (
             PRE_HEADER +
             RSS_LINK.format(root_path, metadata['title']) +
+            make_twitter_card(metadata['title'], global_config, path) +
             HEADER_TEMPLATE.replace('$root', root_path).replace('$icon', global_config["icon"]) +
-            make_twitter_card(metadata['title'], global_config) +
             TITLE_TEMPLATE.format(metadata['title'], get_printed_date(metadata), root_path) +
             defancify(open('/tmp/temp_output.html').read()) +
             FOOTER

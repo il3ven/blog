@@ -5,3 +5,5 @@
 [posts_directory]: <> (general)
 [homepage_category]: <> (general)
 [domain]: <> (https://il3ven.github.io/blog)
+
+<!-- domain without trailing slash -->
