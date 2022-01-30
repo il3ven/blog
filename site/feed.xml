@@ -11,10 +11,28 @@
   </image>
 
 <item>
-<title>Hello</title>
-<link>https://il3ven.github.io/blog/general/2022/01/22/hello.html</link>
-<guid>https://il3ven.github.io/blog/general/2022/01/22/hello.html</guid>
-<pubDate>Sat, 22 Jan 2022 00:00:00 +0000</pubDate>
+<title>About this category</title>
+<link>https://il3ven.github.io/blog/general/2022/01/30/movies_about.html</link>
+<guid>https://il3ven.github.io/blog/general/2022/01/30/movies_about.html</guid>
+<pubDate>Sun, 30 Jan 2022 00:00:00 +0000</pubDate>
+<description>About the category Movies. This is a category for mainly sharing movie recommendations.</description>
+</item>
+
+
+<item>
+<title>04 - Personal Favorite Movies and T.V Shows</title>
+<link>https://il3ven.github.io/blog/general/2022/01/30/movies_04.html</link>
+<guid>https://il3ven.github.io/blog/general/2022/01/30/movies_04.html</guid>
+<pubDate>Sun, 30 Jan 2022 00:00:00 +0000</pubDate>
+<description>About the category Movies. This is a category for mainly sharing movie recommendations.</description>
+</item>
+
+
+<item>
+<title>Math is fun</title>
+<link>https://il3ven.github.io/blog/general/2022/01/23/math_is_fun.html</link>
+<guid>https://il3ven.github.io/blog/general/2022/01/23/math_is_fun.html</guid>
+<pubDate>Sun, 23 Jan 2022 00:00:00 +0000</pubDate>
 <description>This is the first post of my blog. I hope you like it.</description>
 </item>
 
@@ -25,15 +43,6 @@
 <guid>https://il3ven.github.io/blog/general/2021/12/24/coffee.html</guid>
 <pubDate>Fri, 24 Dec 2021 00:00:00 +0000</pubDate>
 <description></description>
-</item>
-
-
-<item>
-<title>Math is fun</title>
-<link>https://il3ven.github.io/blog/general/2022/01/23/math_is_fun.html</link>
-<guid>https://il3ven.github.io/blog/general/2022/01/23/math_is_fun.html</guid>
-<pubDate>Sun, 23 Jan 2022 00:00:00 +0000</pubDate>
-<description>This is the first post of my blog. I hope you like it.</description>
 </item>
 
 </channel>

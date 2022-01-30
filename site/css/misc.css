@@ -7,6 +7,11 @@
   margin-bottom: 30px;
 }
 
+.toc-category {
+  padding-right: 6px;
+  padding-left: 6px;
+}
+
 @media only screen and (orientation: landscape) {
   .post-link {
     display: block;
@@ -17,15 +22,6 @@
     font-size: 14px;
     color: #828282;
   }
-
-  .toc-category {
-    display: inline-block;
-    width: 100px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 6px;
-    padding-left: 6px;
-  }
 }
 
 @media only screen and (orientation: portrait) {
@@ -35,15 +31,6 @@
   .post-meta {
     /* font-size: 24px; */
     color: #828282;
-  }
-
-  .toc-category {
-    display: inline-block;
-    width: 200px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-right: 12px;
-    padding-left: 12px;
   }
 }
 
@@ -262,8 +249,3 @@ code span.wa {
   font-weight: bold;
   font-style: italic;
 } /* Warning */
-.display.math {
-  display: block;
-  text-align: center;
-  margin: 0.5rem auto;
-}
