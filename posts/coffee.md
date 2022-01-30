@@ -1,6 +1,7 @@
 [category]: <> (General)
 [date]: <> (2021/12/24)
 [title]: <> (Get over instant coffee - From an Indian's perspective)
+[description]: <> (Instant coffee is the worst tasting coffee. For 20 years of my life, the only coffee I knew was instant coffee. Try brewing from coffee beans and you'll surely notice the taste difference.)
 
 Instant coffee is the worst tasting coffee. For 20 years of my life, the only coffee I knew was instant coffee.
 

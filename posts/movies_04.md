@@ -1,7 +1,7 @@
 [category]: <> (Movies)
 [date]: <> (2022/01/30)
 [title]: <> (04 - Personal Favorite Movies and T.V Shows)
-[description]: <> (About the category Movies. This is a category for mainly sharing movie recommendations.)
+[description]: <> (This is the 4th post in the series of my personal favorite movies and T.V shows. I hope you'll find something worth watching.)
 
 There has been a long gap between this list and the previous. That means, these movies have been filtered out from a large list of movies that I watched in this gap.
 

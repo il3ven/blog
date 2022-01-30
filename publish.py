@@ -115,6 +115,7 @@ TWITTER_CARD_TEMPLATE = """
 <meta property="og:type" content="article" />
 <meta property="og:url" content="{url}" />
 <meta property="og:image" content="{icon}" />
+<meta property="og:description" content="{description}" />
 """
 
 
@@ -202,13 +203,12 @@ def generate_feed(global_config, metadatas):
     )
 
 
-
-
-def make_twitter_card(title, global_config, path):
+def make_twitter_card(title, global_config, path, description='Hi, this is my personal blog where I share my thoughts and experiences.'):
     return TWITTER_CARD_TEMPLATE.format(
-        title = title, 
-        icon = global_config['icon'],
-        url = global_config['domain'] + "/" + path
+        title=title,
+        icon=global_config['icon'],
+        url=global_config['domain'] + "/" + path,
+        description=description
     )
 
 
@@ -296,7 +296,7 @@ if __name__ == '__main__':
         total_file_contents = (
             PRE_HEADER +
             RSS_LINK.format(root_path, metadata['title']) +
-            make_twitter_card(metadata['title'], global_config, path) +
+            make_twitter_card(metadata['title'], global_config, path, metadata['description']) +
             HEADER_TEMPLATE.replace('$root', root_path).replace('$icon', global_config["icon"]) +
             TITLE_TEMPLATE.format(metadata['title'], get_printed_date(metadata), root_path) +
             defancify(open('/tmp/temp_output.html').read()) +
