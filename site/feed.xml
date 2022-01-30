@@ -11,11 +11,29 @@
   </image>
 
 <item>
+<title>Hello</title>
+<link>https://il3ven.github.io/blog/general/2022/01/22/hello.html</link>
+<guid>https://il3ven.github.io/blog/general/2022/01/22/hello.html</guid>
+<pubDate>Sat, 22 Jan 2022 00:00:00 +0000</pubDate>
+<description>This is the first post of my blog. I hope you like it.</description>
+</item>
+
+
+<item>
 <title>Get over instant coffee - From an Indian's perspective</title>
 <link>https://il3ven.github.io/blog/general/2021/12/24/coffee.html</link>
 <guid>https://il3ven.github.io/blog/general/2021/12/24/coffee.html</guid>
 <pubDate>Fri, 24 Dec 2021 00:00:00 +0000</pubDate>
 <description></description>
+</item>
+
+
+<item>
+<title>Math is fun</title>
+<link>https://il3ven.github.io/blog/general/2022/01/23/math_is_fun.html</link>
+<guid>https://il3ven.github.io/blog/general/2022/01/23/math_is_fun.html</guid>
+<pubDate>Sun, 23 Jan 2022 00:00:00 +0000</pubDate>
+<description>This is the first post of my blog. I hope you like it.</description>
 </item>
 
 </channel>

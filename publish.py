@@ -187,7 +187,8 @@ def generate_feed(global_config, metadatas):
         return RSS_ITEM_TEMPLATE.format(
             title=metadata['title'],
             link=get_link('/'.join([global_config['posts_directory'], metadata['date'], metadata['filename']])),
-            pub_date=get_date(metadata['date']), description=''
+            pub_date=get_date(metadata['date']),
+            description=metadata.get('description', '')
         )
 
     return RSS_MAIN_TEMPLATE.strip().format(
@@ -219,13 +220,16 @@ def defancify(text):
 def make_categories_header(categories, root_path):
     o = ['<center><hr>']
     for category in categories:
-        template = '<span class="toc-category" style="font-size:{}%"><a href="{}/categories/{}.html">{}</a></span>'
+        template = '<span class="toc-category" style="font-size:{}%"><a href="{}/{}">{}</a></span>'
         o.append(template.format(min(100, 1000 // len(category)), root_path, category, category.capitalize()))
     o.append('<hr></center>')
     return '\n'.join(o)
 
 
 def get_printed_date(metadata):
+    if(metadata.get('pinned')):
+        return "📌 Pinned"
+    
     year, month, day = metadata['date'].split('/')
     month = 'JanFebMarAprMayJunJulAugSepOctNovDec'[int(month)*3-3:][:3]
     return year + ' ' + month + ' ' + day
@@ -239,7 +243,7 @@ def make_toc(toc_items, global_config, all_categories, category=None):
     if category:
         title = category.capitalize()
         root_path = '..'
-        path = 'categories/' + category + '.html'
+        path = category + 'index.html'
     else:
         title = global_config['title']
         root_path = '.'
@@ -312,15 +316,16 @@ if __name__ == '__main__':
     print("Detected categories: {}".format(' '.join(categories)))
 
     sorted_metadatas = sorted(metadatas, key=lambda x: x['date'], reverse=True)
+    sorted_metadatas = sorted(sorted_metadatas, key=lambda x: 'pinned' in x, reverse=True)
     feed = generate_feed(global_config, sorted_metadatas)
 
-    os.system('mkdir -p {}'.format(os.path.join('site', 'categories')))
+    # os.system('mkdir -p {}'.format(os.path.join('site', 'categories')))
 
     print("Building tables of contents...")
 
     homepage_toc_items = [
         make_toc_item(global_config, metadata, '.') for metadata in sorted_metadatas if
-        global_config.get('homepage_category', '') in metadata['categories'].union({''})
+        global_config.get('homepage_category', '') in metadata['categories'].union({''}) or 'pinned' in metadata
     ]
 
     for category in categories:
@@ -329,7 +334,8 @@ if __name__ == '__main__':
             category in metadata['categories']
         ]
         toc = make_toc(category_toc_items, global_config, categories, category)
-        open(os.path.join('site', 'categories', category+'.html'), 'w').write(toc)
+        os.system('mkdir -p {}'.format(os.path.join('site', category)))
+        open(os.path.join('site', category, 'index.html'), 'w').write(toc)
 
     open('site/feed.xml', 'w').write(feed)
     open('site/index.html', 'w').write(make_toc(homepage_toc_items, global_config, categories))
