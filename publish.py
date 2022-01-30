@@ -77,8 +77,8 @@ TOC_TITLE_TEMPLATE = """
 <title> {0} </title>
 <br>
 <center>
-    <h1 style="border-bottom:0px"> {0} </h1>
-    <small>👋 Hi, this is my personal blog. Contact me at <code>to.vc95 (at) gmail (dot) com</code></small>
+  <h1 style="border-bottom:0px"> {0} </h1>
+  <small>👋 Hi, this is my personal blog. Contact me at <code>to.vc95 (at) gmail (dot) com</code></small>
 </center>
 """
 
@@ -227,16 +227,19 @@ def make_categories_header(categories, root_path):
 
 
 def get_printed_date(metadata):
-    if(metadata.get('pinned')):
-        return "📌 Pinned"
-    
     year, month, day = metadata['date'].split('/')
     month = 'JanFebMarAprMayJunJulAugSepOctNovDec'[int(month)*3-3:][:3]
     return year + ' ' + month + ' ' + day
 
+def get_printed_date_or_pinned(metadata):
+    if(metadata.get('pinned')):
+        return "📌 Pinned"
+    
+    return get_printed_date(metadata)
+
 def make_toc_item(global_config, metadata, root_path):
     link = metadata_to_path(global_config, metadata)
-    return TOC_ITEM_TEMPLATE.format(get_printed_date(metadata), root_path + '/' + link, metadata['title'])
+    return TOC_ITEM_TEMPLATE.format(get_printed_date_or_pinned(metadata), root_path + '/' + link, metadata['title'])
 
 
 def make_toc(toc_items, global_config, all_categories, category=None):
