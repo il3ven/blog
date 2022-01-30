@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+# -*- coding: utf-8 -*- 
 import os, sys, datetime
 
 PRE_HEADER = """
@@ -78,8 +79,10 @@ TOC_TITLE_TEMPLATE = """
 <br>
 <center>
   <h1 style="border-bottom:0px"> {0} </h1>
-  <small>👋 Hi, this is my personal blog. Contact me at <code>to.vc95 (at) gmail (dot) com</code></small>
 </center>
+<small>👋 Hi, this is my personal blog. Contact me at <code>to.vc95 (at) gmail (dot) com</code></small>
+<br> <br>
+This page contains posts from the <b>{1}</b> category. See below for other categories.
 """
 
 FOOTER = """ </div> """
@@ -245,9 +248,11 @@ def make_toc_item(global_config, metadata, root_path):
 def make_toc(toc_items, global_config, all_categories, category=None):
     if category:
         title = category.capitalize()
+        category = title
         root_path = '..'
         path = category + 'index.html'
     else:
+        category = global_config['homepage_category'].capitalize()
         title = global_config['title']
         root_path = '.'
         path = ''
@@ -256,7 +261,7 @@ def make_toc(toc_items, global_config, all_categories, category=None):
         RSS_LINK.format(root_path, title) +
         make_twitter_card(title, global_config, path) +
         HEADER_TEMPLATE.replace('$root', root_path).replace('$icon', global_config['icon']) +
-        TOC_TITLE_TEMPLATE.format(title) +
+        TOC_TITLE_TEMPLATE.format(title, category) +
         make_categories_header(all_categories, root_path) +
         TOC_START +
         ''.join(toc_items) +
@@ -315,6 +320,8 @@ if __name__ == '__main__':
         if filename[-4:-1] != '.sw':
             metadatas.append(extract_metadata(open(os.path.join('posts', filename)), filename))
             categories = categories.union(metadatas[-1]['categories'])
+
+    categories = sorted(categories)
             
     print("Detected categories: {}".format(' '.join(categories)))
 
@@ -328,7 +335,7 @@ if __name__ == '__main__':
 
     homepage_toc_items = [
         make_toc_item(global_config, metadata, '.') for metadata in sorted_metadatas if
-        global_config.get('homepage_category', '') in metadata['categories'].union({''}) or 'pinned' in metadata
+        global_config.get('homepage_category', '') in metadata['categories'].union({''})
     ]
 
     for category in categories:
