@@ -1,0 +1,59 @@
+<?xml version="1.0" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <atom:link href="https://il3ven.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
+  <title>il3ven's website</title>
+  <link>https://il3ven.github.io/blog/</link>
+  <description>il3ven's website</description>
+  <image>
+      <url>https://github.com/il3ven/blog/blob/main/images/favicon.png?raw=true</url>
+      <title>il3ven's website</title>
+      <link>https://il3ven.github.io/blog/</link>
+  </image>
+
+<item>
+<title>About this category</title>
+<link>https://il3ven.github.io/blog/general/2022/01/30/movies_about.html</link>
+<guid>https://il3ven.github.io/blog/general/2022/01/30/movies_about.html</guid>
+<pubDate>Sun, 30 Jan 2022 00:00:00 +0000</pubDate>
+<description>About the category Movies. This is a category for mainly sharing movie recommendations.</description>
+</item>
+
+
+<item>
+<title>Life in an urban jungle - 1</title>
+<link>https://il3ven.github.io/blog/general/2022/08/21/life-in-a-jungle-1.html</link>
+<guid>https://il3ven.github.io/blog/general/2022/08/21/life-in-a-jungle-1.html</guid>
+<pubDate>Sun, 21 Aug 2022 00:00:00 +0000</pubDate>
+<description>I live in a jungle! A jungle made of concrete often called Delhi and it’s my home. I look at my relationship with cars as a pedestrian.</description>
+</item>
+
+
+<item>
+<title>04 - Personal Favorite Movies and T.V Shows</title>
+<link>https://il3ven.github.io/blog/general/2022/01/30/movies_04.html</link>
+<guid>https://il3ven.github.io/blog/general/2022/01/30/movies_04.html</guid>
+<pubDate>Sun, 30 Jan 2022 00:00:00 +0000</pubDate>
+<description>This is the 4th post in the series of my personal favorite movies and T.V shows. I hope you'll find something worth watching.</description>
+</item>
+
+
+<item>
+<title>Math is fun</title>
+<link>https://il3ven.github.io/blog/general/2022/01/23/math_is_fun.html</link>
+<guid>https://il3ven.github.io/blog/general/2022/01/23/math_is_fun.html</guid>
+<pubDate>Sun, 23 Jan 2022 00:00:00 +0000</pubDate>
+<description>This is the first post of my blog. I hope you like it.</description>
+</item>
+
+
+<item>
+<title>Get over instant coffee - From an Indian's perspective</title>
+<link>https://il3ven.github.io/blog/general/2021/12/24/coffee.html</link>
+<guid>https://il3ven.github.io/blog/general/2021/12/24/coffee.html</guid>
+<pubDate>Fri, 24 Dec 2021 00:00:00 +0000</pubDate>
+<description>Instant coffee is the worst tasting coffee. For 20 years of my life, the only coffee I knew was instant coffee. Try brewing from coffee beans and you'll surely notice the taste difference.</description>
+</item>
+
+</channel>
+</rss>
