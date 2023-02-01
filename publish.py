@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*- 
 import os, sys, datetime
+from urllib.parse import urljoin
 
 PRE_HEADER = """
 
@@ -213,10 +214,13 @@ def generate_feed(global_config, metadatas):
     )
 
 
-def make_twitter_card(title, global_config, path, description='Hi, this is my personal blog where I share my thoughts and experiences.'):
+def make_twitter_card(title, global_config, path, description='Hi, this is my personal blog where I share my thoughts and experiences.', icon = None):
+    # OG image can't work with relative URL
+    icon = urljoin(global_config['domain'], icon) if icon else global_config['icon']
+
     return TWITTER_CARD_TEMPLATE.format(
         title=title,
-        icon=global_config['icon'],
+        icon=icon,
         url=global_config['domain'] + "/" + path,
         description=description
     )
@@ -306,7 +310,7 @@ if __name__ == '__main__':
         total_file_contents = (
             PRE_HEADER +
             RSS_LINK.format(root_path, metadata['title']) +
-            make_twitter_card(metadata['title'], global_config, path, metadata['description']) +
+            make_twitter_card(metadata['title'], global_config, path, metadata['description'], metadata.get('icon', None)) +
             HEADER_TEMPLATE.replace('$root', root_path).replace('$icon', global_config["icon"]) +
             TITLE_TEMPLATE.format(metadata['title'], get_printed_date(metadata), root_path) +
             defancify(open('/tmp/temp_output.html').read()) +
