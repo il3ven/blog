@@ -216,7 +216,8 @@ def generate_feed(global_config, metadatas):
 
 def make_twitter_card(title, global_config, path, description='Hi, this is my personal blog where I share my thoughts and experiences.', icon = None):
     # OG image can't work with relative URL
-    icon = urljoin(global_config['domain'], icon) if icon else global_config['icon']
+    print('i', urljoin(global_config['domain'] + "/", icon))
+    icon = urljoin(global_config['domain'] + "/", icon) if icon else global_config['icon']
 
     return TWITTER_CARD_TEMPLATE.format(
         title=title,

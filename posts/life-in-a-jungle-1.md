@@ -2,7 +2,7 @@
 [date]: <> (2022/08/21)
 [title]: <> (Life in an urban jungle - 1)
 [description]: <> (I live in a jungle! A jungle made of concrete often called Delhi and it’s my home. I look at my relationship with cars as a pedestrian.)
-[icon]: <> (../../../../images/life-in-a-jungle-1/https3a2f2fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984s3amazonawscom2fpublic2fimages2f71ccf7f3-e26d-448e-b71a-1db262ecadc0_900x1125.jpeg)
+[icon]: <> (./images/life-in-a-jungle-1/https3a2f2fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984s3amazonawscom2fpublic2fimages2f71ccf7f3-e26d-448e-b71a-1db262ecadc0_900x1125.jpeg)
 
 <!-- Center align all images. They aren't by default -->
 <style>
